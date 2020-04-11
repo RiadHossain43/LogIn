@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom right,#CBE9FF,white);
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    background-color: #9FFFDA;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#loadbox{
+    height: 20px;
+    width: 80px;
+    background-color: white;
+    animation: load 1s infinite;
+}
+
+form{
+    z-index: -1;
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    background-color:#3F66C3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 6px 10px gray,
+                0 6px 15px lightslategray;
+    letter-spacing: 2px;
+}
+h3{
+    text-align: justify;
+    color: white;
+}
+i{
+    margin:20px;
+    font-size: 30px;
+    color: white;
+}
+#title{
+    font-size: 15px;
+}
+#facebook{
+    font-size: 30px;
+}
+h3,input,button{
+    margin-bottom: 30px;
+}
+input:hover,button:hover{
+    box-shadow: 0px 4px 10px black;
+}
+input{
+    width: 70%;
+    height: 5%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    opacity: 0;
+}
+button{
+    width: 70%;
+    height: 8%;
+    border-radius: 4px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    background-color: #EAFBFF;
+    opacity: 0;
+}
+
+@media screen and (max-width: 850px){
+    form{
+        width: 85%;
+        height: 80%;
+        padding: 20px;
+
+    }
+    #title{
+        font-size: 15px;
+    }
+    input{
+        padding: 10px 15px;
+    }
+    h3{
+        margin: 0 15px 30px 15px;
+    }
+
+}
+
+@keyframes load{
+    0%{
+        width: 0;
+    }50%{
+        width: 80px;
+    }100%{
+        width: 0;
+    }
+}
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.75s;
+  }
+  .bounceIn {
+    animation-duration: 0.75s;
+    animation-name: bounceIn;
+    animation-delay: .8s;
+  }
