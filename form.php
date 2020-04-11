@@ -32,7 +32,7 @@ if($numbError == "" &&  $passError == "")
                 "Reply to:".$emailTo."\r\n";
 
     mail($emailTo,$subject,$body,$headers);
-    header("Location: index.php");
+    header("Location: index.html");
 }
     
     //else 
